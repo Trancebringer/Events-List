@@ -266,7 +266,6 @@ function addListeners(){
 		for (let m = 0; m < eventArr.length; m++){
 			for (let n = 0; n < eventArr[m].length; n++){
 				if (eventArr[m][n].ID == task){
-					debugger;
 					eventArr[m].splice(n, 1);
 					if (eventArr[m].length <= 1) {
 						eventArr.splice(m, 1);
@@ -274,7 +273,6 @@ function addListeners(){
 				}
 			}
 		}
-		debugger;
 		rewrite();
 	}
 
