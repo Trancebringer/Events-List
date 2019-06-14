@@ -1,0 +1,82 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+}
+#dateSelector{
+	position: absolute;
+	top: 5px;
+	left: calc(97.5vw - 130px);
+}
+.dateSelector{
+	width: 130px;
+}
+#eventsList{
+	margin-top: 40px;
+}
+.dateBox{
+	margin-left: 2.3vw;
+	width: 30vw;
+	display: none;
+	vertical-align: top;
+}
+.shown{
+	display: inline-block;
+}
+.dateTitle{
+	background: lightgray;
+	text-align: center;
+	padding: 5px 0 5px 0;
+	margin-bottom: 10px;
+}
+.event{
+	display: block;
+	margin-top: 5px;
+}
+.event p{
+	display: inline-block;
+}
+.eventName, .editName{
+	width: 15vw;
+}
+.timeFrom, .timeTo, .editTime{
+	width: 5vw;
+}
+#addEventBox{
+	margin-top: 20px;
+	width: 900px;
+	margin-left: calc(50% - 450px);
+}
+h3{
+	text-align: center;
+}
+.addEventField{
+	width: 420px;
+	margin-right: 20px;
+}
+#addEventBox p{
+	width: 420px;
+	margin-right: 20px;
+	display: inline-block;
+	margin-top: 20px;
+}
+#btn{
+	width: 150px;
+	height: 40px;
+	background: orange;
+	float: right;
+	margin: 20px 34px 0 0;
+}
+.editEvent{
+	width: 30vw;
+	position: absolute;
+	display: none;
+}
+.editOn{
+	display: inline-block;
+}
+.invalid{
+	background: red;
+}

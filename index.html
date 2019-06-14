@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Список мероприятий</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"  crossorigin="anonymous">
+</head>
+<body>
+	<header>
+		<form id="dateSelector">
+			<select class="dateSelector">
+				<option selected="selected">Все даты</option>
+				<option>22.05.2019</option>
+			</select>
+		</form>
+	</header>
+	
+	<section id="eventsList">
+		<div class="editEvent">
+			<input type="text" class="edit editName">
+			<input type="text" class="edit editTime">
+			<input type="text" class="edit editTime">
+			<i class="fas fa-check"></i>
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="dateBox shown">
+			<div class="dateTitle">22.05.2019</div>
+			<ul class="events">
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+			</ul>
+		</div>
+		<div class="dateBox shown">
+			<div class="dateTitle">22.05.2019</div>
+			<ul class="events">
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+			</ul>
+		</div>
+		<div class="dateBox shown">
+			<div class="dateTitle">22.05.2019</div>
+			<ul class="events">
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+			</ul>
+		</div>
+		<div class="dateBox">
+			<div class="dateTitle">22.05.2019</div>
+			<ul class="events">
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+			</ul>
+		</div>
+		<div class="dateBox">
+			<div class="dateTitle">22.05.2019</div>
+			<ul class="events">
+				<li class="event">
+					<p class="eventName">Custom 1</p>
+					<p class="timeFrom">08:00</p>
+					<p class="timeTo">12:00</p>
+					<i class="fas fa-edit"></i>
+					<!-- <i class="fas fa-check"></i> -->
+					<i class="fas fa-times"></i>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="addEventBox">
+		<h3>Добавить мероприятие</h3>
+		<p>Название</p>
+		<p>Дата</p>
+		<input type="text" class="addEventField">
+		<input type="date" class="addEventField">
+		<p>Время начала</p>
+		<p>Время конца</p>
+		<input type="text" class="addEventField">
+		<input type="text" class="addEventField">
+		<button id="btn">ДОБАВИТЬ</button>
+	</section>
+	<script src="script.js"></script>
+</body>
+</html>
