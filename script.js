@@ -110,6 +110,7 @@ function checkTimeAndPush(dateArr, obj){
 				eventArr[i].push(tempArr[k]);
 			}
 	}
+	debugger;
 }
 
 function sortByDate(){
@@ -243,7 +244,9 @@ function deleteTask(el) {
 	for (let m = 0; m < eventArr.length; m++){
 		let length = eventArr[m].length
 		for (let n = 0; n < length; n++){
+			console.log(eventArr[m][n].ID);
 			if (eventArr[m][n].ID == task){
+				console.log(eventArr[m][n].ID);
 				eventArr[m].splice(n, 1);
 				if (eventArr[m].length <= 1) {
 					eventArr.splice(m, 1);
@@ -252,13 +255,45 @@ function deleteTask(el) {
 		}
 	}
 	rewrite();
+	debugger;
 }
 
 // редактирование мероприятий
 
 function editTask(el){
-	document.querySelector('.editEvent').classList.add('editOn');
+	let editWindow = document.querySelector('.editEvent')
+	editWindow.classList.add('editOn');
+	editWindow.style.top = el.getBoundingClientRect().top + 'px';
+	editWindow.style.left = el.getBoundingClientRect().left + 'px';
+	editWindow.addEventListener('click', function(event){
+		if (event.target.classList.contains('fa-times')){
+			deleteTask(el);
+			editWindow.classList.remove('editOn');
+		}
+		if (event.target.classList.contains('fa-check')){
+			acceptEdit(el);
+			editWindow.classList.remove('editOn');
+		}
+	});
+	debugger;
+}
 
+function acceptEdit(el){
+	let editFields = document.querySelectorAll('.edit');
+	let obj1 = {};
+	obj1.ID = el.getAttribute('id');
+	obj1.name = editFields[0].value;
+	obj1.startTime = editFields[1].value;
+	obj1.endTime = editFields[2].value;
+	let strArr = el.parentNode.parentNode.querySelector('.dateTitle').innerText.split(".");
+	let str = strArr[2] + '-' + strArr[1] + '-' + strArr[0];
+	let dateArr = [];
+	dateArr.push(str);
+	console.log(el);
+	deleteTask(el);
+	checkTimeAndPush(dateArr, obj1);
+	rewrite();
+	debugger;
 }
 
 // сохранение в локаль с соответствующим рефакторингом

@@ -38,10 +38,10 @@
 .event p{
 	display: inline-block;
 }
-.eventName, .editName{
+.eventName{
 	width: 15vw;
 }
-.timeFrom, .timeTo, .editTime{
+.timeFrom, .timeTo{
 	width: 5vw;
 }
 #addEventBox{
@@ -70,13 +70,21 @@ h3{
 	margin: 20px 34px 0 0;
 }
 .editEvent{
-	width: 30vw;
+	width: 32vw;
 	position: absolute;
 	display: none;
+	z-index: 2;
+	background: white;
 }
 .editOn{
 	display: inline-block;
 }
 .invalid{
 	background: red;
+}
+.editName{
+	width: 15vw;
+}
+.editTime{
+	width: 6vw;
 }
