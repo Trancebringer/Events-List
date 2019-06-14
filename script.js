@@ -94,11 +94,6 @@ function checkTimeAndPush(dateArr, obj){
 					objIsAdded = true;
 				}
 			}
-			// else {
-			// 	eventArr[i].push(obj);
-			// 	debugger;
-			// 	objIsAdded = true;
-			// }
 		}
 		else {
 			eventArr[i].push(obj);
@@ -218,15 +213,6 @@ function rewrite(){
 			element.classList.add('fas');
 			element.classList.add('fa-times');
 			eventLi[eventLi.length - 1].appendChild(element);
-			// let temp = document.querySelectorAll('i');
-			// temp[temp.length - 1].addEventListener('click', function(){
-			// 	let num = 0;
-			// 	for (let m = 0; m < eventArr.length; m++){
-			// 		for (let n = 1; n < eventArr[i].length; n++){
-
-			// 		}
-			// 	}
-			// })
 		}
 	}
 }
@@ -252,30 +238,27 @@ function addListeners(){
 
 // удаление мероприятий
 
-	// eventT.addEventListener('click', function(event){
-	// 	if (event.target.classList.contains('fa-trash-alt')){
-	// 		deleteTask(event.target.parentNode); //parentNode - обращаемся к род. элем
-	// 	}
-	// 	if (event.target.classList.contains('fa-edit')){
-	// 		editTask(event.target.parentNode); //parentNode - обращаемся к род. элем
-	// 	}
-	// });
-
-	function deleteTask(el) {
-		var task = el.getAttribute('id');
-		for (let m = 0; m < eventArr.length; m++){
-			for (let n = 0; n < eventArr[m].length; n++){
-				if (eventArr[m][n].ID == task){
-					eventArr[m].splice(n, 1);
-					if (eventArr[m].length <= 1) {
-						eventArr.splice(m, 1);
-					}
+function deleteTask(el) {
+	var task = el.getAttribute('id');
+	for (let m = 0; m < eventArr.length; m++){
+		let length = eventArr[m].length
+		for (let n = 0; n < length; n++){
+			if (eventArr[m][n].ID == task){
+				eventArr[m].splice(n, 1);
+				if (eventArr[m].length <= 1) {
+					eventArr.splice(m, 1);
 				}
 			}
 		}
-		rewrite();
 	}
+	rewrite();
+}
 
 // редактирование мероприятий
+
+function editTask(el){
+	document.querySelector('.editEvent').classList.add('editOn');
+
+}
 
 // сохранение в локаль с соответствующим рефакторингом
